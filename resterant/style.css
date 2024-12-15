@@ -1,0 +1,452 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #f2d5a4; /* חום בהיר */
+    height: 15vh; /* גובה 15% מהדף */
+}
+
+.header-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-grow: 1;
+}
+
+input[type="text"] {
+    padding: 10px 15px;
+    margin-right: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 250px;
+}
+
+button {
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+.heart {
+    font-size: 24px;
+    padding: 10px;
+}
+
+/* עיצוב למבנה של העמודות */
+.main-content {
+    display: flex;
+    margin-top: 20px;
+    justify-content: space-between;
+    gap: 30px; /* רווח גדול יותר בין העמודות */
+    width: 100%;
+}
+
+
+.left-column, .right-column {
+    width: 30%; /* כל עמודה צדדית לוקחת 30% */
+    padding: 10px;
+    display: inline-block; /* מתאים לגודל התוכן */
+
+
+}
+
+.center-column {
+    width: 40%; /* העמודה המרכזית לוקחת 40% */
+    padding: 10px;
+    display: inline-block; /* מתאים לגודל התוכן */
+
+
+}
+
+/* כרטיסי תוצאות חיפוש בעמודה השמאלית */
+.card {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+    width: 100%;
+}
+
+.card img {
+    width: 50px; /* תמונה בגודל קטן יותר */
+    height: 50px;
+    margin-right: 10px;
+}
+
+.card p {
+    font-size: 16px;
+    margin: 0;
+}
+
+/* עיצוב תוצאת המתכון בעמודה האמצעית */
+.center-column h2 {
+    font-size: 28px;
+    margin-bottom: 20px;
+    text-align: center;
+    color: #333;
+}
+
+.center-column img {
+    width: 80%; /* תמונה בגודל קטן יותר בעמודה האמצעית */
+    height: auto;
+    margin-bottom: 20px;
+    border-radius: 5px; /* גבולות מעוגלות לתמונה */
+}
+
+/* עיצוב רכיבי המתכון - הצגה מסודרת */
+.center-column .ingredients {
+    font-size: 16px;
+    color: #333;
+    line-height: 1.6;
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* שני טורים */
+    gap: 15px;
+    padding-top: 20px;
+    border-top: 1px solid #ddd;
+}
+
+.center-column .ingredients .ingredient {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.center-column .ingredients .ingredient-name {
+    font-weight: bold;
+}
+
+.center-column .ingredients .ingredient-amount,
+.center-column .ingredients .ingredient-unit {
+    font-size: 14px;
+    color: #555;
+}
+
+.center-column .ingredients .ingredient:before {
+    content: "•"; /* הוספת נקודה לפני כל רכיב */
+    font-size: 18px;
+    color: #4CAF50;
+    margin-right: 10px;
+}
+
+/* גבול ברור בין כל העמודות */
+.main-content > .left-column, .main-content > .right-column {
+    border: 2px solid black
+
+}
+
+.main-content > .center-column {
+    border: 2px solid black
+    
+}
+
+.center-column .ingredients {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* שני טורים */
+    gap: 15px;
+    padding-top: 20px;
+    border-top: 1px solid #ddd;
+}
+
+.center-column .ingredients .ingredient {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.center-column .ingredients .ingredient-name {
+    font-weight: bold;
+}
+
+.center-column .ingredients .ingredient-amount,
+.center-column .ingredients .ingredient-unit {
+    font-size: 14px;
+    color: #555;
+}
+
+.center-column .ingredients .ingredient:before {
+    content: "•"; /* הוספת נקודה לפני כל רכיב */
+    font-size: 18px;
+    color: #4CAF50;
+    margin-right: 10px;
+}
+footer {
+    
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #f2d5a4; /* חום בהיר */
+    height: 15vh; /* גובה 15% מהדף */
+}
+
+
+
+
+
+
+  .heart {
+    position: relative; /* מאפשר לתוכן להיות ממוקם יחסית ל-heart */
+    font-size: 24px;
+    cursor: pointer;
+  }
+  
+  .content {
+    display: none; /* מוסתר כברירת מחדל */
+    position: absolute;
+    top: 120%; /* ממקם את התוכן מתחת לאייקון הלב */
+    left: 50%; /* ממרכז את התוכן ביחס ללב */
+    transform: translateX(-50%); /* מתקן את המרכז */
+    background-color: white;
+    padding: 8px 12px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    white-space: nowrap; /* מונע שבירת שורות */
+    z-index: 10; /* מבטיח שהתוכן יופיע מעל אלמנטים אחרים */
+  }
+  
+  .heart:hover .content {
+    display: block; /* מוצג בעת מעבר עכבר */
+  }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
