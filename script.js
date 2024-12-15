@@ -1,6 +1,6 @@
 
 // מצביע לתיבת החיפוש
-let Search1 = document.getElementById('Search_eat');
+ let Search1 = document.getElementById('Search_eat');
 
 // מצביע לכפתור החיפוש
 let button = document.getElementById('myButton');
