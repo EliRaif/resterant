@@ -1,7 +1,7 @@
 * {
     margin: 0;
     padding: 0;
-     box-sizing: border-box;
+    box-sizing: border-box;
 }
 
 body {
@@ -14,8 +14,10 @@ header {
     justify-content: space-between;
     align-items: center;
     padding: 10px 20px;
-    background-color: #f2d5a4; /* חום בהיר */
-    height: 15vh; /* גובה 15% מהדף */
+    background-color: #f2d5a4;
+    /* חום בהיר */
+    height: 15vh;
+    /* גובה 15% מהדף */
 }
 
 .header-content {
@@ -58,25 +60,9 @@ button:hover {
     display: flex;
     margin-top: 20px;
     justify-content: space-between;
-    gap: 30px; /* רווח גדול יותר בין העמודות */
+    gap: 30px;
+    /* רווח גדול יותר בין העמודות */
     width: 100%;
-}
-
-
-.left-column, .right-column {
-    width: 30%; /* כל עמודה צדדית לוקחת 30% */
-    padding: 10px;
-    display: inline-block; /* מתאים לגודל התוכן */
-
-
-}
-
-.center-column {
-    width: 40%; /* העמודה המרכזית לוקחת 40% */
-    padding: 10px;
-    display: inline-block; /* מתאים לגודל התוכן */
-
-
 }
 
 /* כרטיסי תוצאות חיפוש בעמודה השמאלית */
@@ -92,7 +78,8 @@ button:hover {
 }
 
 .card img {
-    width: 50px; /* תמונה בגודל קטן יותר */
+    width: 50px;
+    /* תמונה בגודל קטן יותר */
     height: 50px;
     margin-right: 10px;
 }
@@ -111,10 +98,12 @@ button:hover {
 }
 
 .center-column img {
-    width: 80%; /* תמונה בגודל קטן יותר בעמודה האמצעית */
+    width: 80%;
+    /* תמונה בגודל קטן יותר בעמודה האמצעית */
     height: auto;
     margin-bottom: 20px;
-    border-radius: 5px; /* גבולות מעוגלות לתמונה */
+    border-radius: 5px;
+    /* גבולות מעוגלות לתמונה */
 }
 
 /* עיצוב רכיבי המתכון - הצגה מסודרת */
@@ -123,7 +112,8 @@ button:hover {
     color: #333;
     line-height: 1.6;
     display: grid;
-    grid-template-columns: 1fr 1fr; /* שני טורים */
+    grid-template-columns: 1fr 1fr;
+    /* שני טורים */
     gap: 15px;
     padding-top: 20px;
     border-top: 1px solid #ddd;
@@ -146,26 +136,20 @@ button:hover {
 }
 
 .center-column .ingredients .ingredient:before {
-    content: "•"; /* הוספת נקודה לפני כל רכיב */
+    content: "•";
+    /* הוספת נקודה לפני כל רכיב */
     font-size: 18px;
     color: #4CAF50;
     margin-right: 10px;
 }
 
-/* גבול ברור בין כל העמודות */
-.main-content > .left-column, .main-content > .right-column {
-    border: 2px solid black
 
-}
 
-.main-content > .center-column {
-    border: 2px solid black
-    
-}
 
 .center-column .ingredients {
     display: grid;
-    grid-template-columns: 1fr 1fr; /* שני טורים */
+    grid-template-columns: 1fr 1fr;
+    /* שני טורים */
     gap: 15px;
     padding-top: 20px;
     border-top: 1px solid #ddd;
@@ -188,19 +172,23 @@ button:hover {
 }
 
 .center-column .ingredients .ingredient:before {
-    content: "•"; /* הוספת נקודה לפני כל רכיב */
+    content: "•";
+    /* הוספת נקודה לפני כל רכיב */
     font-size: 18px;
     color: #4CAF50;
     margin-right: 10px;
 }
+
 footer {
-    
+
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 10px 20px;
-    background-color: #f2d5a4; /* חום בהיר */
-    height: 15vh; /* גובה 15% מהדף */
+    background-color: #f2d5a4;
+    /* חום בהיר */
+    height: 15vh;
+    /* גובה 15% מהדף */
 }
 
 
@@ -208,31 +196,38 @@ footer {
 
 
 
-  .heart {
-    position: relative; /* מאפשר לתוכן להיות ממוקם יחסית ל-heart */
+.heart {
+    position: relative;
+    /* מאפשר לתוכן להיות ממוקם יחסית ל-heart */
     font-size: 24px;
     cursor: pointer;
-  }
-  
-  .content {
-    display: none; /* מוסתר כברירת מחדל */
+}
+
+.content {
+    display: none;
+    /* מוסתר כברירת מחדל */
     position: absolute;
-    top: 120%; /* ממקם את התוכן מתחת לאייקון הלב */
-    left: 50%; /* ממרכז את התוכן ביחס ללב */
-    transform: translateX(-50%); /* מתקן את המרכז */
+    top: 120%;
+    /* ממקם את התוכן מתחת לאייקון הלב */
+    left: 50%;
+    /* ממרכז את התוכן ביחס ללב */
+    transform: translateX(-50%);
+    /* מתקן את המרכז */
     background-color: white;
     padding: 8px 12px;
     border: 1px solid #ccc;
     border-radius: 5px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    white-space: nowrap; /* מונע שבירת שורות */
-    z-index: 10; /* מבטיח שהתוכן יופיע מעל אלמנטים אחרים */
-  }
-  
-  .heart:hover .content {
-    display: block; /* מוצג בעת מעבר עכבר */
-  }
+    white-space: nowrap;
+    /* מונע שבירת שורות */
+    z-index: 10;
+    /* מבטיח שהתוכן יופיע מעל אלמנטים אחרים */
+}
 
+.heart:hover .content {
+    display: block;
+    /* מוצג בעת מעבר עכבר */
+}
 
 
 
@@ -247,206 +242,72 @@ footer {
 
 
 
+.left-column {
+    width: 30%;
+    /* רוחב העמודה */
+    height: 560px;
+    /* גובה העמודה */
+    overflow-y: auto;
+    /* גלילה אנכית */
+    border: 2px solid #ccc;
+    /* מסגרת לעיצוב */
+    padding: 10px;
+    /* רווח פנימי */
+    background-color: #f9f9f9;
+    /* רקע */
+    display: inline-block;
+    /* מתאים לגודל התוכן */
+    margin-left: 10px;
+    margin-right: 10px;
 
+}
 
 
+.center-column {
+    width: 40%;
+    /* רוחב העמודה */
+    height: 560px;
+    /* גובה העמודה */
+    overflow-y: auto;
+    /* גלילה אנכית */
+    border: 2px solid #ccc;
+    /* מסגרת לעיצוב */
+    padding: 10px;
+    /* רווח פנימי */
+    background-color: #f9f9f9;
+    /* רקע */
+    display: inline-block;
+    /* מתאים לגודל התוכן */
 
+}
 
 
+.right-column {
+    width: 30%;
+    /* רוחב העמודה */
+    height: 560px;
+    /* גובה העמודה */
+    overflow-y: auto;
+    /* גלילה אנכית */
+    border: 2px solid #ccc;
+    /* מסגרת לעיצוב */
+    padding: 10px;
+    /* רווח פנימי */
+    background-color: #f9f9f9;
+    /* רקע */
+    display: inline-block;
+    /* מתאים לגודל התוכן */
+    margin-left: 10px;
+    margin-right: 10px;
 
+}
 
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+/* גבול ברור בין כל העמודות */
+.main-content>.left-column,
+.main-content>.right-column,
+.main-content>.center-column {
+    border: 2px solid black
+}

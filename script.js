@@ -349,7 +349,7 @@ function Recipe_information(id) {
 
                     //יוצר תגית רשימה שאליו הולכים להזריק הכל והוא יזורק ליו אל שיצרנו
                     const li = document.createElement('li');
-                    li.style.border = "2px solid red";
+                    li.style.border = "2px solid black";
                     li.style.marginBottom = "10px";
                     li.style.textAlign = "center";
                     li.style.listStyleType = 'none';
