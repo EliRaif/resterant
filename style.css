@@ -6,6 +6,15 @@
 
 body {
     font-family: Arial, sans-serif;
+    margin: 0; /* מסיר רווחים חיצוניים ברירת מחדל */
+    padding: 0; /* מסיר רווחים פנימיים ברירת מחדל */
+    background-image: url('images/PIK.jpg'); /* כתובת התמונה */
+    background-size: cover; /* פריסה מלאה על כל הדף */
+    background-position: center; /* ממקם את התמונה במרכז */
+    background-repeat: no-repeat; /* מונע חזרתיות של התמונה */
+    height: 100vh; /* גובה הדף יהיה מלא */
+    width: 100%; /* רוחב הדף יהיה מלא */
+    color: black; /* צבע טקסט נוגד לרקע */
 
 }
 
@@ -14,10 +23,13 @@ header {
     justify-content: space-between;
     align-items: center;
     padding: 10px 20px;
-    background-color: #f2d5a4;
+    background-color:#f2d5a46e;
     /* חום בהיר */
     height: 15vh;
     /* גובה 15% מהדף */
+    opacity: 0.9; /* שקיפות על הבלוק */
+
+
 }
 
 .header-content {
@@ -253,18 +265,22 @@ footer {
     /* מסגרת לעיצוב */
     padding: 10px;
     /* רווח פנימי */
-    background-color: #f9f9f9;
-    /* רקע */
     display: inline-block;
     /* מתאים לגודל התוכן */
     margin-left: 10px;
     margin-right: 10px;
+    opacity: 0.8; /* שקיפות של 80% */
+    /* background-color: transparent; רקע שקוף */
+    background-color: rgba(255, 255, 255, 0.7); /* צבע לבן עם שקיפות */
+    opacity: 0.9; /* שקיפות על הבלוק */
+
+
 
 }
 
 
 .center-column {
-    width: 40%;
+    width: 39%;
     /* רוחב העמודה */
     height: 560px;
     /* גובה העמודה */
@@ -278,6 +294,9 @@ footer {
     /* רקע */
     display: inline-block;
     /* מתאים לגודל התוכן */
+    background-color: rgba(255, 255, 255, 0.7); /* צבע לבן עם שקיפות */
+    opacity: 0.9; /* שקיפות על הבלוק */
+
 
 }
 
@@ -299,6 +318,9 @@ footer {
     /* מתאים לגודל התוכן */
     margin-left: 10px;
     margin-right: 10px;
+    background-color: rgba(255, 255, 255, 0.7); /* צבע לבן עם שקיפות */
+    opacity: 0.9; /* שקיפות על הבלוק */
+
 
 }
 

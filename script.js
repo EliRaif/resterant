@@ -515,7 +515,7 @@ function AdReciv(ingredientsListDiv) {
     dataInfo.extendedIngredients.forEach(ingredient => {
 
         //משרשר שם רכיב + סוג מידה + כמות 
-        const ingredientText = `Name: ${ingredient.name}, Amount: ${(ingredient.amount / dataInfo.servings) * count} ${ingredient.unit}`;
+        const ingredientText = ` ${ingredient.name} ${(ingredient.amount / dataInfo.servings) * count} ${ingredient.unit}`;
 
         //מייצר תגית מסוג פסקה שאליו הוא הולך להזריק את כל השרשור שיצרנו אמש
         const ingredientParagraph = document.createElement('p');
