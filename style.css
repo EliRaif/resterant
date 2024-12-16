@@ -6,15 +6,24 @@
 
 body {
     font-family: Arial, sans-serif;
-    margin: 0; /* מסיר רווחים חיצוניים ברירת מחדל */
-    padding: 0; /* מסיר רווחים פנימיים ברירת מחדל */
-    background-image: url('images/PIK.jpg'); /* כתובת התמונה */
-    background-size: cover; /* פריסה מלאה על כל הדף */
-    background-position: center; /* ממקם את התמונה במרכז */
-    background-repeat: no-repeat; /* מונע חזרתיות של התמונה */
-    height: 100vh; /* גובה הדף יהיה מלא */
-    width: 100%; /* רוחב הדף יהיה מלא */
-    color: black; /* צבע טקסט נוגד לרקע */
+    margin: 0;
+    /* מסיר רווחים חיצוניים ברירת מחדל */
+    padding: 0;
+    /* מסיר רווחים פנימיים ברירת מחדל */
+    background-image: url('images/PIK.jpg');
+    /* כתובת התמונה */
+    background-size: cover;
+    /* פריסה מלאה על כל הדף */
+    background-position: center;
+    /* ממקם את התמונה במרכז */
+    background-repeat: no-repeat;
+    /* מונע חזרתיות של התמונה */
+    height: 100vh;
+    /* גובה הדף יהיה מלא */
+    width: 100%;
+    /* רוחב הדף יהיה מלא */
+    color: black;
+    /* צבע טקסט נוגד לרקע */
 
 }
 
@@ -23,11 +32,14 @@ header {
     justify-content: space-between;
     align-items: center;
     padding: 10px 20px;
-    background-color:#f2d5a46e;
+    background-color: #f2d5a46e;
     /* חום בהיר */
     height: 15vh;
     /* גובה 15% מהדף */
-    opacity: 0.9; /* שקיפות על הבלוק */
+    opacity: 0.9;
+    /* שקיפות על הבלוק */
+    border: 2px solid #ccc;
+
 
 
 }
@@ -39,33 +51,32 @@ header {
     flex-grow: 1;
 }
 
+
+/* אחראי על העיצוב של התיבת טקטסט חיפוש  */
 input[type="text"] {
     padding: 10px 15px;
     margin-right: 10px;
     font-size: 16px;
     border: 1px solid #ccc;
     border-radius: 5px;
-    width: 250px;
+    width: 340px;
+    display: inline-block;
+    /* תיבת טקסט מותאמת אוטומטית */
+
 }
 
 button {
     padding: 10px 20px;
     font-size: 16px;
-    background-color: #4CAF50;
+    background-color: #f2d5a46e;
     color: white;
     border: none;
     border-radius: 5px;
     cursor: pointer;
 }
 
-button:hover {
-    background-color: #45a049;
-}
 
-.heart {
-    font-size: 24px;
-    padding: 10px;
-}
+
 
 /* עיצוב למבנה של העמודות */
 .main-content {
@@ -208,38 +219,6 @@ footer {
 
 
 
-.heart {
-    position: relative;
-    /* מאפשר לתוכן להיות ממוקם יחסית ל-heart */
-    font-size: 24px;
-    cursor: pointer;
-}
-
-.content {
-    display: none;
-    /* מוסתר כברירת מחדל */
-    position: absolute;
-    top: 120%;
-    /* ממקם את התוכן מתחת לאייקון הלב */
-    left: 50%;
-    /* ממרכז את התוכן ביחס ללב */
-    transform: translateX(-50%);
-    /* מתקן את המרכז */
-    background-color: white;
-    padding: 8px 12px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    white-space: nowrap;
-    /* מונע שבירת שורות */
-    z-index: 10;
-    /* מבטיח שהתוכן יופיע מעל אלמנטים אחרים */
-}
-
-.heart:hover .content {
-    display: block;
-    /* מוצג בעת מעבר עכבר */
-}
 
 
 
@@ -251,8 +230,7 @@ footer {
 
 
 
-
-
+/* אחראי על עיצוב עמודה שמאלית תוצאות חיפוש */
 
 .left-column {
     width: 30%;
@@ -269,15 +247,18 @@ footer {
     /* מתאים לגודל התוכן */
     margin-left: 10px;
     margin-right: 10px;
-    opacity: 0.8; /* שקיפות של 80% */
+    opacity: 0.8;
+    /* שקיפות של 80% */
     /* background-color: transparent; רקע שקוף */
-    background-color: rgba(255, 255, 255, 0.7); /* צבע לבן עם שקיפות */
-    opacity: 0.9; /* שקיפות על הבלוק */
+    background-color: rgba(255, 255, 255, 0.7);
+    /* צבע לבן עם שקיפות */
+    opacity: 0.9;
+    /* שקיפות על הבלוק */
 
-
-
+    text-align: center
 }
 
+/* אחראי על עיצוב עמודה אמצעית רכיב מתכון  */
 
 .center-column {
     width: 39%;
@@ -294,12 +275,15 @@ footer {
     /* רקע */
     display: inline-block;
     /* מתאים לגודל התוכן */
-    background-color: rgba(255, 255, 255, 0.7); /* צבע לבן עם שקיפות */
-    opacity: 0.9; /* שקיפות על הבלוק */
+    background-color: rgba(255, 255, 255, 0.7);
+    /* צבע לבן עם שקיפות */
+    opacity: 0.9;
+    /* שקיפות על הבלוק */
 
-
+    text-align: center
 }
 
+/* אחראי על עיצוב עמודה ימנית רשימת קניות רכיב מתכון  */
 
 .right-column {
     width: 30%;
@@ -318,10 +302,12 @@ footer {
     /* מתאים לגודל התוכן */
     margin-left: 10px;
     margin-right: 10px;
-    background-color: rgba(255, 255, 255, 0.7); /* צבע לבן עם שקיפות */
-    opacity: 0.9; /* שקיפות על הבלוק */
+    background-color: rgba(255, 255, 255, 0.7);
+    /* צבע לבן עם שקיפות */
+    opacity: 0.9;
+    /* שקיפות על הבלוק */
 
-
+    text-align: center
 }
 
 
@@ -333,3 +319,31 @@ footer {
 .main-content>.center-column {
     border: 2px solid black
 }
+
+
+
+.content {
+    display: none; /* מוסתר כברירת מחדל */
+    position: absolute;
+    top: 120%; /* ממקם את התוכן מתחת לאייקון הלב */
+    left: 50%; /* ממרכז את התוכן ביחס ללב */
+    transform: translateX(-50%); /* ממרכז את התוכן בצורה מדויקת */
+    padding: 8px 12px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    z-index: 10; /* מבטיח שהתוכן יופיע מעל אלמנטים אחרים */
+    width: 30%; /* רוחב העמודה */
+    height: 560px; /* גובה העמודה */
+    overflow-y: auto; /* גלילה אנכית */
+    border: 2px solid #ccc; /* מסגרת לעיצוב */
+    background-color: rgba(255, 255, 255, 0.7); /* צבע לבן עם שקיפות */
+    opacity: 1; /* שקיפות על הבלוק */
+    text-align: center; /* מרכז את התוכן במידה ויש טקסט */
+}
+
+
+.heart:hover .content {
+    display: block;
+    /* מוצג בעת מעבר עכבר */
+}
+
+

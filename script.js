@@ -6,13 +6,13 @@
 let button = document.getElementById('myButton');
 
 // מצביע לחלון תוצאות חיפוש בצד שמאל
-let search_results = document.getElementById('left-column1');
+let search_results = document.getElementById('left-column');
 
 // מצביע לחלון רכיבי מתכון אמצע העמוד
-let recipeDetails = document.getElementById('left-column2');
+let recipeDetails = document.getElementById('center-column');
 
 // מצביע לחלון רשימת קניות בצד ימין
-let shopping_list = document.getElementById('left-column3');
+let shopping_list = document.getElementById('right-column');
 
 //מצביע לדיו שנמצא בתוך הדיו של המועדפים
 let ad_heart = document.querySelector('.content');
