@@ -117,12 +117,19 @@ function Search_eat1() {
                 eater.appendChild(eater1);
 
 
-                img1.style.width = "400px"
-                img1.style.height = "150px"
-                eater.style.border = "2px solid black";
+                img1.style.width = "350px"
+                img1.style.height = "100px"
+                // eater.style.border = "2px solid black";
                 eater.style.marginBottom = "10px";
                 eater.style.textAlign = "center"
                 eater1.style.textAlign = "center"
+                eater.style.padding="10px"
+                eater.style.borderRadius="16px"
+                img1.style.borderRadius="16px"
+                eater1.style. fontWeight="bold"; /* עושה את הטקסט מודגש */
+
+
+
 
 
                 //מכניס כילד, את הדיו שיצרנו אמש ומכיל את כל הנתונים למשתנה בשם סארטש ריזולט שמצביע לחלון השמאלי בעמוד וזה יציג את כל המתכונים השווים לחיפוש    
@@ -350,6 +357,8 @@ function Recipe_information(id) {
                     //יוצר תגית רשימה שאליו הולכים להזריק הכל והוא יזורק ליו אל שיצרנו
                     const li = document.createElement('li');
                     li.style.border = "2px solid black";
+                   li.style. borderRadius="9%";
+
                     li.style.marginBottom = "10px";
                     li.style.textAlign = "center";
                     li.style.listStyleType = 'none';

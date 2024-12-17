@@ -39,9 +39,6 @@ header {
     opacity: 0.9;
     /* שקיפות על הבלוק */
     border: 2px solid #ccc;
-
-
-
 }
 
 .header-content {
@@ -52,32 +49,6 @@ header {
 }
 
 
-/* אחראי על העיצוב של התיבת טקטסט חיפוש  */
-input[type="text"] {
-    padding: 10px 15px;
-    margin-right: 10px;
-    font-size: 16px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    width: 340px;
-    display: inline-block;
-    /* תיבת טקסט מותאמת אוטומטית */
-
-}
-
-button {
-    padding: 10px 20px;
-    font-size: 16px;
-    background-color: #f2d5a46e;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-}
-
-
-
-
 /* עיצוב למבנה של העמודות */
 .main-content {
     display: flex;
@@ -86,120 +57,6 @@ button {
     gap: 30px;
     /* רווח גדול יותר בין העמודות */
     width: 100%;
-}
-
-/* כרטיסי תוצאות חיפוש בעמודה השמאלית */
-.card {
-    display: flex;
-    align-items: center;
-    margin-bottom: 15px;
-    padding: 10px;
-    border: 1px solid #ddd;
-    border-radius: 5px;
-    background-color: #f9f9f9;
-    width: 100%;
-}
-
-.card img {
-    width: 50px;
-    /* תמונה בגודל קטן יותר */
-    height: 50px;
-    margin-right: 10px;
-}
-
-.card p {
-    font-size: 16px;
-    margin: 0;
-}
-
-/* עיצוב תוצאת המתכון בעמודה האמצעית */
-.center-column h2 {
-    font-size: 28px;
-    margin-bottom: 20px;
-    text-align: center;
-    color: #333;
-}
-
-.center-column img {
-    width: 80%;
-    /* תמונה בגודל קטן יותר בעמודה האמצעית */
-    height: auto;
-    margin-bottom: 20px;
-    border-radius: 5px;
-    /* גבולות מעוגלות לתמונה */
-}
-
-/* עיצוב רכיבי המתכון - הצגה מסודרת */
-.center-column .ingredients {
-    font-size: 16px;
-    color: #333;
-    line-height: 1.6;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    /* שני טורים */
-    gap: 15px;
-    padding-top: 20px;
-    border-top: 1px solid #ddd;
-}
-
-.center-column .ingredients .ingredient {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-}
-
-.center-column .ingredients .ingredient-name {
-    font-weight: bold;
-}
-
-.center-column .ingredients .ingredient-amount,
-.center-column .ingredients .ingredient-unit {
-    font-size: 14px;
-    color: #555;
-}
-
-.center-column .ingredients .ingredient:before {
-    content: "•";
-    /* הוספת נקודה לפני כל רכיב */
-    font-size: 18px;
-    color: #4CAF50;
-    margin-right: 10px;
-}
-
-
-
-
-.center-column .ingredients {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    /* שני טורים */
-    gap: 15px;
-    padding-top: 20px;
-    border-top: 1px solid #ddd;
-}
-
-.center-column .ingredients .ingredient {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-}
-
-.center-column .ingredients .ingredient-name {
-    font-weight: bold;
-}
-
-.center-column .ingredients .ingredient-amount,
-.center-column .ingredients .ingredient-unit {
-    font-size: 14px;
-    color: #555;
-}
-
-.center-column .ingredients .ingredient:before {
-    content: "•";
-    /* הוספת נקודה לפני כל רכיב */
-    font-size: 18px;
-    color: #4CAF50;
-    margin-right: 10px;
 }
 
 footer {
@@ -215,21 +72,6 @@ footer {
 }
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 /* אחראי על עיצוב עמודה שמאלית תוצאות חיפוש */
 
 .left-column {
@@ -239,8 +81,10 @@ footer {
     /* גובה העמודה */
     overflow-y: auto;
     /* גלילה אנכית */
-    border: 2px solid #ccc;
+    border: 2px solid black;
     /* מסגרת לעיצוב */
+    border-radius: 9%;
+
     padding: 10px;
     /* רווח פנימי */
     display: inline-block;
@@ -252,7 +96,7 @@ footer {
     /* background-color: transparent; רקע שקוף */
     background-color: rgba(255, 255, 255, 0.7);
     /* צבע לבן עם שקיפות */
-    opacity: 0.9;
+    opacity: 1;
     /* שקיפות על הבלוק */
 
     text-align: center
@@ -267,17 +111,18 @@ footer {
     /* גובה העמודה */
     overflow-y: auto;
     /* גלילה אנכית */
-    border: 2px solid #ccc;
+    border: 2px solid black;
     /* מסגרת לעיצוב */
+    border-radius: 9%;
+
     padding: 10px;
     /* רווח פנימי */
-    background-color: #f9f9f9;
     /* רקע */
     display: inline-block;
     /* מתאים לגודל התוכן */
     background-color: rgba(255, 255, 255, 0.7);
     /* צבע לבן עם שקיפות */
-    opacity: 0.9;
+    opacity: 1;
     /* שקיפות על הבלוק */
 
     text-align: center
@@ -292,11 +137,12 @@ footer {
     /* גובה העמודה */
     overflow-y: auto;
     /* גלילה אנכית */
-    border: 2px solid #ccc;
+    border: 2px solid black;
+    border-radius: 9%;
+
     /* מסגרת לעיצוב */
     padding: 10px;
     /* רווח פנימי */
-    background-color: #f9f9f9;
     /* רקע */
     display: inline-block;
     /* מתאים לגודל התוכן */
@@ -304,46 +150,78 @@ footer {
     margin-right: 10px;
     background-color: rgba(255, 255, 255, 0.7);
     /* צבע לבן עם שקיפות */
-    opacity: 0.9;
+    opacity: 1;
     /* שקיפות על הבלוק */
 
     text-align: center
 }
 
 
-
-
-/* גבול ברור בין כל העמודות */
-.main-content>.left-column,
-.main-content>.right-column,
-.main-content>.center-column {
-    border: 2px solid black
+.heart {
+    position: relative;
+    z-index: 10;
+    /* מוודא שהלב יהיה מעל כל אלמנט אחר */
 }
-
-
 
 .content {
-    display: none; /* מוסתר כברירת מחדל */
+    display: none;
+    /* מוסתר כברירת מחדל */
     position: absolute;
-    top: 120%; /* ממקם את התוכן מתחת לאייקון הלב */
-    left: 50%; /* ממרכז את התוכן ביחס ללב */
-    transform: translateX(-50%); /* ממרכז את התוכן בצורה מדויקת */
+    top: 100%;
+    /* ממקם את התוכן מתחת לאייקון הלב */
+    left: 110%;
+    /* ממרכז את התוכן ביחס ללב */
+    transform: translateX(-50%);
+    /* ממרכז את התוכן בצורה מדויקת */
     padding: 8px 12px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    z-index: 10; /* מבטיח שהתוכן יופיע מעל אלמנטים אחרים */
-    width: 30%; /* רוחב העמודה */
-    height: 560px; /* גובה העמודה */
-    overflow-y: auto; /* גלילה אנכית */
-    border: 2px solid #ccc; /* מסגרת לעיצוב */
-    background-color: rgba(255, 255, 255, 0.7); /* צבע לבן עם שקיפות */
-    opacity: 1; /* שקיפות על הבלוק */
-    text-align: center; /* מרכז את התוכן במידה ויש טקסט */
+    z-index: 50;
+    /* מבטיח שהתוכן יהיה מעל הלב */
+    width: 1000px;
+    /* רוחב העמודה */
+    height: 500px;
+    /* גובה העמודה */
+    overflow-y: auto;
+    /* גלילה אנכית */
+    border: 2px solid black;
+    /* מסגרת לעיצוב */
+    background-color: #ffffff;
+    /* צבע רקע מלא */
+    opacity: 1;
+    /* ביטול שקיפות */
+    visibility: hidden;
+    /* מוסתר כברירת מחדל */
+    text-align: center;
+    /* מרכז את התוכן במידה ויש טקסט */
 }
-
 
 .heart:hover .content {
     display: block;
-    /* מוצג בעת מעבר עכבר */
+    /* מציג את התוכן בעת מעבר עכבר */
+    visibility: visible;
+    /* הופך אותו לגלוי */
 }
 
+/* אחראי על העיצוב של התיבת טקטסט חיפוש  */
+input[type="text"] {
+    padding: 10px 15px;
+    margin-right: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 340px;
+    display: inline-block;
 
+}
+
+/* אחראי על העיצוב של הכפתור  חיפוש  */
+
+button {
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #f2d5a46e;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
