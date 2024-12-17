@@ -209,7 +209,10 @@ function Recipe_information(id) {
 
             // מייצר תג מסוג דיו שהוא הולך להכיל את רכיבי המתכון שמוצג בחלון האמצעי
             const ingredientsListDiv = document.createElement('div');
-            ingredientsListDiv.style.marginTop = '20px';
+            // ingredientsListDiv.style.marginTop = '20px';
+
+            ingredientsListDiv.classList.add('ingredientsListDiv');
+
 
             // מייצר תגית מסוג  דיו שמוצג בראש העמוד של דף הרכיבים
             let header_recipeDetails = document.createElement('div');
@@ -557,10 +560,13 @@ function AdReciv(ingredientsListDiv) {
         const ingredientText = ` ${ingredient.name} ${(ingredient.amount / dataInfo.servings) * count} ${ingredient.unit}`;
 
         //מייצר תגית מסוג פסקה שאליו הוא הולך להזריק את כל השרשור שיצרנו אמש
-        const ingredientParagraph = document.createElement('p');
+        const ingredientParagraph = document.createElement('div');
+
+        ingredientParagraph.classList.add('recipe-item');
+
 
         //מזריק את כל השרשור שיצרנו לתגית מסוג פסקה
-        ingredientParagraph.textContent = ingredientText;
+        ingredientParagraph.textContent = ingredientText + "  "+"✔️";
 
         //מכניס כילד את הפסקה עם השרשור,-------לדיו שקבלנו והוא אמור להציג את רכיבי המתכון 
         ingredientsListDiv.appendChild(ingredientParagraph);

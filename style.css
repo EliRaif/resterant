@@ -59,17 +59,8 @@ header {
     width: 100%;
 }
 
-footer {
 
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 10px 20px;
-    background-color: #f2d5a4;
-    /* חום בהיר */
-    height: 15vh;
-    /* גובה 15% מהדף */
-}
+
 
 
 /* אחראי על עיצוב עמודה שמאלית תוצאות חיפוש */
@@ -125,7 +116,7 @@ footer {
     opacity: 1;
     /* שקיפות על הבלוק */
 
-    text-align: center
+    /* text-align: center */
 }
 
 /* אחראי על עיצוב עמודה ימנית רשימת קניות רכיב מתכון  */
@@ -252,4 +243,29 @@ button {
     border-radius: 8px; /* פינות מעוגלות */
     cursor: pointer; /* סמן של אצבע */
     transition: background-color 0.3s; /* אנימציה צבע */
+}
+
+
+
+
+
+
+/* עיצוב הדיב שמכיל את כל רכיבי המתכון */
+.ingredientsListDiv {
+    display: grid;  /* הפעלת grid */
+    grid-template-columns: repeat(2, 1fr);  /* שתי עמודות */
+    gap: 20px; /* מרווחים בין האלמנטים */
+    padding: 20px;
+    box-sizing: border-box;
+    width: 100%; /* לוודא שהדיב תופס את כל הרוחב */
+}
+
+/* עיצוב כל רכיב (פסקה או אלמנט) */
+.recipe-item {
+    background-color: #f9f9f9;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    border: 1px solid #ddd;
+    margin: 0;
 }
