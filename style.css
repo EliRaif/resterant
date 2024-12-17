@@ -225,3 +225,31 @@ button {
     border-radius: 5px;
     cursor: pointer;
 }
+
+
+/* העיצוב של ה-div שמכיל את כל האלמנטים */
+.header-recipe-details {
+    display: flex; /* הפעלה של Flexbox */
+    justify-content: center; /* ממרכז את התוכן בשורה, מרחקים שווים */
+    align-items: center; /* ממרכז את האלמנטים אנכית */
+    gap: 10px; /* מרווח בין האלמנטים */
+    font-size: 16px;
+    padding: 15px;
+    background-color: #fff;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* צל עדין */
+    border-radius: 30px; /* פינות מעוגלות */
+    border: 1px solid #ddd; /* מסגרת עדינה */
+
+  }
+
+  /* עיצוב רק לכפתורים בתוך ה-div עם הקלאס 'header-recipe-details' */
+.header-recipe-details button {
+    background-color: rgba(194, 178, 128, 1); /* צבע בז */
+    color: white; /* צבע טקסט לבן */
+    border: none; /* ביטול גבול */
+    padding: 10px 20px; /* מרווחים בתוך הכפתור */
+    font-size: 16px; /* גודל הפונט */
+    border-radius: 8px; /* פינות מעוגלות */
+    cursor: pointer; /* סמן של אצבע */
+    transition: background-color 0.3s; /* אנימציה צבע */
+}

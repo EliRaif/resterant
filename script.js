@@ -1,6 +1,6 @@
 
 // מצביע לתיבת החיפוש
- let Search1 = document.getElementById('Search_eat');
+let Search1 = document.getElementById('Search_eat');
 
 // מצביע לכפתור החיפוש
 let button = document.getElementById('myButton');
@@ -123,10 +123,10 @@ function Search_eat1() {
                 eater.style.marginBottom = "10px";
                 eater.style.textAlign = "center"
                 eater1.style.textAlign = "center"
-                eater.style.padding="10px"
-                eater.style.borderRadius="16px"
-                img1.style.borderRadius="16px"
-                eater1.style. fontWeight="bold"; /* עושה את הטקסט מודגש */
+                eater.style.padding = "10px"
+                eater.style.borderRadius = "16px"
+                img1.style.borderRadius = "16px"
+                eater1.style.fontWeight = "bold"; /* עושה את הטקסט מודגש */
 
 
 
@@ -212,13 +212,39 @@ function Recipe_information(id) {
             ingredientsListDiv.style.marginTop = '20px';
 
             // מייצר תגית מסוג  דיו שמוצג בראש העמוד של דף הרכיבים
-            let header_recipeDetails = document.createElement('header');
+            let header_recipeDetails = document.createElement('div');
+
+            header_recipeDetails.classList.add("header-recipe-details");
+
+
+            let minutes = document.createElement('p');
+
+            let servings = document.createElement('p');
+
+            let servingsImg = document.createElement('p');
+
+            let servingsImg1 = document.createElement('p');
+
+
+            
+            minutes.innerHTML= `⏰ ${dataInfo.readyInMinutes} MINUTES`;
+
+            servingsImg.innerHTML= "👨‍🌾";
+
+            servings.innerHTML= count;
+
+            servingsImg1.innerHTML= "SERVINGS";
+
+            servings.id="servings-count"
 
             //מזריק לתגית שיצרנו אמש את זמן בישול  המתכון + כמות הסועדים להם מותאם המתכון
-            header_recipeDetails.innerHTML = `⏰ ${dataInfo.readyInMinutes} MINUTES 👨‍🌾 <span id="servings-count">${count}</span> SERVINGS`;
+
+            header_recipeDetails.append(minutes, servingsImg, servings, servingsImg1);
+
 
             //  מייצר תג מסוג כפתור להגדלת כמות  הסועדים
             const plus = document.createElement('button');
+
 
             //מעדכן את הסמל שיוצק על כפתור הפלוס
             plus.innerHTML = "+"
@@ -236,6 +262,8 @@ function Recipe_information(id) {
 
             // מייצר תג מסוג כפתור להקטנת כמות הסועדים
             const minus = document.createElement('button');
+
+
             minus.innerHTML = "-"
 
             //מוסיף לתגית מסוג כפתןר המינוס, פונקציית האזנה, שבאם המשתמש ילחץ עליו 
@@ -263,7 +291,9 @@ function Recipe_information(id) {
 
 
             // מייצר תגית מסוג  דיו שמוצג בתחתית  העמוד של דף הרכיבים
-            const footer_recipeDetails = document.createElement('footer');
+            const footer_recipeDetails = document.createElement('div');
+
+            footer_recipeDetails.classList.add("header-recipe-details");
 
             //  מייצר תג מסוג כפתור לשמירת המתכון למועדפים שלי
             const Add_to_favorites = document.createElement('button');
@@ -357,7 +387,7 @@ function Recipe_information(id) {
                     //יוצר תגית רשימה שאליו הולכים להזריק הכל והוא יזורק ליו אל שיצרנו
                     const li = document.createElement('li');
                     li.style.border = "2px solid black";
-                   li.style. borderRadius="9%";
+                    li.style.borderRadius = "9%";
 
                     li.style.marginBottom = "10px";
                     li.style.textAlign = "center";
