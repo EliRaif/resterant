@@ -308,7 +308,7 @@ function Recipe_information(id) {
               <img src="images/LEV.PNG" alt="WhatsApp" style="width: 20px; height: 20px;">
             </div>
           `;
-          
+
 
 
             //  מייצר תג מסוג כפתור לשמירת המתכון למועדפים שלי
@@ -324,7 +324,7 @@ function Recipe_information(id) {
 
 
 
-           //  מייצר תג מסוג כפתור לשמירת המתכון למועדפים שלי
+            //  מייצר תג מסוג כפתור לשמירת המתכון למועדפים שלי
             const send_to_Email = document.createElement('button');
 
 
@@ -334,7 +334,7 @@ function Recipe_information(id) {
               <img src="images/Email.PNG" alt="WhatsApp" style="width: 20px; height: 20px;">
             </div>
           `;
-          
+
 
 
             send_to_whatsapp.addEventListener("click", () => {
@@ -422,7 +422,7 @@ function Recipe_information(id) {
               <img src="images/shopping basket.JPG" alt="WhatsApp" style="width: 20px; height: 20px;">
             </div>
           `;
-          
+
 
 
             //מוסיף לתגית מסוג כפתור הוספה לרשימת קניות, פונקציית האזנה, שבאם המשתמש ילחץ עליו זה יוסיף את הרכיבים לסל קניות בחלון הימני
@@ -432,71 +432,54 @@ function Recipe_information(id) {
                 shopping_list.innerHTML = '';
 
                 //יוצר תג מסוג רשימה שבו הולכים להכניס כילד את כל מה שנוצר עבור רשימת הקניות וזה אחכ יוזרק לחלון הראשי בצד ימין
-                const shopping = document.createElement('ul');
-                // shopping_list.appendChild(shopping);
+                const shopping = document.createElement('div');
 
                 //מתחיל לרוץ על השתנה שלנו ששמרנו אצלו את האבייקש עם מידע על המתכון הספציצפי
                 dataInfo.extendedIngredients.forEach(ingredient => {
 
                     //יוצר תגית רשימה שאליו הולכים להזריק הכל והוא יזורק ליו אל שיצרנו
-                    const li = document.createElement('li');
-                    li.style.border = "2px solid black";
-                    li.style.borderRadius = "9%";
+                    const li = document.createElement('div');
+                    li.classList.add('shopping-item');  // מוסיף את הקלאס של פריט ברשימת קניות
 
-                    li.style.marginBottom = "10px";
-                    li.style.textAlign = "center";
-                    li.style.listStyleType = 'none';
-                    li.style.paddingTop = '10px';    // ריפוד 10 פיקסלים בחלק העליון
-                    li.style.paddingRight = '5px';  // ריפוד 20 פיקסלים בצד ימין
-                    li.style.paddingBottom = '10px'; // ריפוד 10 פיקסלים בחלק התחתון
-                    li.style.paddingLeft = '5px';   // ריפוד 20 פיקסלים בצד שמא
+
 
                     //מייצר תגית מסוג ספאן שהוא הולך לקבל את שם המתכון
-                    const name = document.createElement('span');
+                    const name = document.createElement('p');
 
                     //מכניס לתגית שיצרנו אמש את שם המתכון על פי מה שהוא אוחז כרעג בלולאה
                     name.textContent = ` ${ingredient.name} `;
-                    name.style.marginRight = "10px";
 
                     //מייצר תגית מסוג בלוק שאליו הולכים להזריק את כפתורי פלוס מינוס וכן את התיבת שמחזיק את הערך\כמות רכיב
                     const quantityWrapper = document.createElement('div');
-                    quantityWrapper.style.display = 'inline-flex';
-                    quantityWrapper.style.alignItems = 'center';
+                    quantityWrapper.classList.add('quantity-wrapper');  // מוסיף את הקלאס של תיבת הכמות
+
 
                     //מייצר תגית מסוג כפתור להורדת כמות הרכיב ברשית קניות לרכיב הספציפי
                     const decrementBtn = document.createElement('button');
+                    decrementBtn.classList.add('decrement-btn');  // מוסיף את הקלאס לכפתור ההורדה
 
                     //מעדכן מה יהיה הציור על הכפתור
                     decrementBtn.textContent = '↓';
-                    decrementBtn.style.margin = '0 5px';
-                    decrementBtn.style.padding = '5px';
-                    decrementBtn.style.fontSize = '16px';
-                    decrementBtn.style.backgroundColor = 'black';  // שינוי צבע הרקע לשחור
+
 
                     //מייצר תגית מסוג תיבת טקסט שבו יוצק הכמות של הרכיב
                     const quantity = document.createElement('input');
-
+                    quantity.classList.add('quantity-input');
                     //מגדיר שהתגית תחזיק ערך מסוג טקטס
                     quantity.type = 'text';
+                    quantity.readOnly = true; // מניעת עריכה ישירה של התיבה
+
 
                     //מכניס לתגית שיצרנו אמש את שם כמות הרכיב על פי מה שהוא מקבל מהאובייקט כפול כמות הסועדים כשהתווסף לרישמת קניות
                     quantity.value = `${(ingredient.amount / dataInfo.servings) * count}`;
-                    quantity.style.width = '50px';
-                    quantity.style.textAlign = 'center';
-                    quantity.style.margin = '0 5px';
-                    quantity.style.border = '1px solid #ccc';
-                    quantity.style.padding = '5px';
-                    quantity.readOnly = true; // מניעת עריכה ישירה של התיבה
+
 
                     //מייצר תגית מסוג כפתור להעלאת כמות הרכיב ברשית קניות לרכיב הספציפי
                     const incrementBtn = document.createElement('button');
-
+                    incrementBtn.classList.add('increment-btn');  // מוסיף את הקלאס לכפתור ההעלאה
                     //מעדכן מה יהיה הציור על הכפתור
                     incrementBtn.textContent = '↑';
-                    incrementBtn.style.margin = '0 5px';
-                    incrementBtn.style.padding = '5px';
-                    incrementBtn.style.fontSize = '16px';
-                    incrementBtn.style.backgroundColor = 'black';  // שינוי צבע הרקע לשחור
+
 
                     //מוסיף לתגית מסוג כפתור הקטנת כמות רכיב מסל הקניות, פונקציית האזנה, שבאם המשתמש ילחץ עליו זה יעדכן את כמות הרכיב בתיבת הטקטס על פי החישוב
                     decrementBtn.addEventListener('click', () => {
@@ -544,12 +527,12 @@ function Recipe_information(id) {
 
                     //מייצר כפתור מחיקה עבור הרכיב הספציפי בסל הקניות
                     const deleteBtn = document.createElement('button');
+                    deleteBtn.classList.add('delete-btn');  // מוסיף את הקלאס לכפתור המחיקה
 
                     //מעדכן מה יהיה הציור על הכפתור
-                    deleteBtn.textContent = '🚮';
-                    deleteBtn.style.fontSize = '30px'; // שינוי גודל הטקסט (האימוג'י) ל-24 פיקסלים
-                    deleteBtn.style.marginLeft = '10px';
-                    deleteBtn.style.backgroundColor = 'white';
+                    deleteBtn.innerHTML = '<img src="images/GARBITSH.JPG"  style="width: 25px; height: 25px;">';
+
+
 
                     //מוסיף האזנה ללחיצת הכפתור מחיקה ואז הוא מוחק את כל התג של ה אל איי שהוא מחזיק את הרכיב
                     deleteBtn.addEventListener('click', () => {

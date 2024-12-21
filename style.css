@@ -74,7 +74,7 @@ header {
     /* גלילה אנכית */
     border: 2px solid black;
     /* מסגרת לעיצוב */
-    border-radius: 9%;
+    border-radius: 8%;
 
     padding: 10px;
     /* רווח פנימי */
@@ -104,7 +104,7 @@ header {
     /* גלילה אנכית */
     border: 2px solid black;
     /* מסגרת לעיצוב */
-    border-radius: 9%;
+    border-radius: 8%;
 
     padding: 10px;
     /* רווח פנימי */
@@ -129,7 +129,7 @@ header {
     overflow-y: auto;
     /* גלילה אנכית */
     border: 2px solid black;
-    border-radius: 9%;
+    border-radius: 8%;
 
     /* מסגרת לעיצוב */
     padding: 10px;
@@ -194,7 +194,7 @@ header {
 }
 
 /* אחראי על העיצוב של התיבת טקטסט חיפוש  */
-input[type="text"] {
+.header-content input[type="text"] {
     padding: 10px 15px;
     margin-right: 10px;
     font-size: 16px;
@@ -264,8 +264,80 @@ button {
 .recipe-item {
     background-color: #f9f9f9;
     padding: 15px;
-    border-radius: 8px;
+    border-radius: 9%;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     border: 1px solid #ddd;
     margin: 0;
 }
+
+
+
+
+
+
+/* קלאס עבור התג של רשימת קניות */
+.shopping-list {
+    display: flex;
+    flex-direction: column; /* כל פריט יהיה בשורה נפרדת */
+    padding: 10px;
+  }
+  
+  /* קלאס עבור כל פריט ברשימה */
+  .shopping-item {
+    display: flex; /* הצגת כל פריט בשורה אחת */
+    justify-content: space-between; /* רווח בין הפריטים */
+    align-items: center; /* מרכז את כל התוכן אנכית */
+    background-color: #f9f9f9;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 8px;
+    border: 1px solid #ddd;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* עיצוב לכפתורי פלוס ומינוס */
+  .quantity-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 10px; /* רווח בין כפתורי פלוס ומינוס */
+  }
+  
+  /* כפתור הפחתת כמות */
+  .decrement-btn, .increment-btn {
+    background-color: #f44336; /* אדום */
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+    font-size: 16px;
+    border-radius: 3px;
+  }
+  
+  .decrement-btn:hover, .increment-btn:hover {
+    background-color: #d32f2f; /* אדום כהה יותר */
+  }
+  
+  /* תיבת טקסט של כמות הרכיב */
+  .quantity-input {
+    width: 50px;
+    text-align: center;
+    padding: 5px;
+    border: 2px solid black; /* מסגרת שחורה */
+    border-radius: 5px;
+    font-size: 14px;
+    margin-left: 10px;
+  }
+  
+  /* כפתור מחיקה */
+  .delete-btn {
+    background-color: transparent;
+    border: none;
+    color: #f44336;
+    font-size: 20px;
+    cursor: pointer;
+  }
+  
+  .delete-btn:hover {
+    color: #d32f2f;
+  }
+  
