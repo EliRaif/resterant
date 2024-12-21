@@ -302,25 +302,51 @@ function Recipe_information(id) {
             const Add_to_favorites = document.createElement('button');
 
             //מעדכן מה יהיה השם של הכפתור
-            Add_to_favorites.innerHTML = "  ❤️ הוספה למועדפים"
+            Add_to_favorites.innerHTML = `
+            <div style="font-size: 14px; font-family: Arial, sans-serif; display: flex; align-items: center; gap: 8px;">
+            הוספה למועדפים
+              <img src="images/LEV.PNG" alt="WhatsApp" style="width: 20px; height: 20px;">
+            </div>
+          `;
+          
 
 
             //  מייצר תג מסוג כפתור לשמירת המתכון למועדפים שלי
             const send_to_whatsapp = document.createElement('button');
 
-            //מעדכן מה יהיה השם של הכפתור
-            send_to_whatsapp.innerHTML = " 📞 שליחת המתכון לווצאפ"
+
+            send_to_whatsapp.innerHTML = `
+            <div style="font-size: 14px; font-family: Arial, sans-serif; display: flex; align-items: center; gap: 8px;">
+              שליחה  לווצאפ
+              <img src="images/whatsapp.PNG" alt="WhatsApp" style="width: 20px; height: 20px;">
+            </div>
+          `;
+
+
+
+           //  מייצר תג מסוג כפתור לשמירת המתכון למועדפים שלי
+            const send_to_Email = document.createElement('button');
+
+
+            send_to_Email.innerHTML = `
+            <div style="font-size: 14px; font-family: Arial, sans-serif; display: flex; align-items: center; gap: 8px;">
+              שליחה  לאימייל
+              <img src="images/Email.PNG" alt="WhatsApp" style="width: 20px; height: 20px;">
+            </div>
+          `;
+          
+
 
             send_to_whatsapp.addEventListener("click", () => {
 
 
-            // יצירת קישור לשליחה בווצאפ
-            const url = `https://wa.me/${+9720583269399}?text=${encodeURIComponent(ingredientsListDiv.textContent)}`;
+                // יצירת קישור לשליחה בווצאפ
+                const url = `https://wa.me/${+9720583269399}?text=${encodeURIComponent(ingredientsListDiv.textContent)}`;
 
-            // פתיחת הקישור בלשונית חדשה
-            window.open(url, "_blank");
+                // פתיחת הקישור בלשונית חדשה
+                window.open(url, "_blank");
             });
-        
+
 
 
             //מוסיף לתגית מסוג כפתןר המועדפים, פונקציית האזנה, שבאם המשתמש ילחץ עליו זה יוסיף למועדפים את המתכון
@@ -389,7 +415,14 @@ function Recipe_information(id) {
             const Add_to_shopping_list = document.createElement('button');
 
             //מעדכן מה יהיה השם של הכפתור
-            Add_to_shopping_list.innerHTML = "הוספה לרשימת הקניות"
+            Add_to_shopping_list.innerHTML = `
+
+            <div style="font-size: 14px; font-family: Arial, sans-serif; display: flex; align-items: center; gap: 8px;">
+            הוסף לסל קניות
+              <img src="images/shopping basket.JPG" alt="WhatsApp" style="width: 20px; height: 20px;">
+            </div>
+          `;
+          
 
 
             //מוסיף לתגית מסוג כפתור הוספה לרשימת קניות, פונקציית האזנה, שבאם המשתמש ילחץ עליו זה יוסיף את הרכיבים לסל קניות בחלון הימני
@@ -548,6 +581,8 @@ function Recipe_information(id) {
             footer_recipeDetails.appendChild(Add_to_shopping_list)
 
             footer_recipeDetails.appendChild(send_to_whatsapp)
+
+            footer_recipeDetails.appendChild(send_to_Email)
 
 
             //שולח את הדיו שיצרנו אמש עבור הצגת הרכיבין - לפונקציה שמכינה את הרכיבים של המתכון
