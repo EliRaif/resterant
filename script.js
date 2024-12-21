@@ -229,16 +229,16 @@ function Recipe_information(id) {
             let servingsImg1 = document.createElement('p');
 
 
-            
-            minutes.innerHTML= `⏰ ${dataInfo.readyInMinutes} MINUTES`;
 
-            servingsImg.innerHTML= "👨‍🌾";
+            minutes.innerHTML = `⏰ ${dataInfo.readyInMinutes} MINUTES`;
 
-            servings.innerHTML= count;
+            servingsImg.innerHTML = "👨‍🌾";
 
-            servingsImg1.innerHTML= "SERVINGS";
+            servings.innerHTML = count;
 
-            servings.id="servings-count"
+            servingsImg1.innerHTML = "SERVINGS";
+
+            servings.id = "servings-count"
 
             //מזריק לתגית שיצרנו אמש את זמן בישול  המתכון + כמות הסועדים להם מותאם המתכון
 
@@ -303,6 +303,24 @@ function Recipe_information(id) {
 
             //מעדכן מה יהיה השם של הכפתור
             Add_to_favorites.innerHTML = "  ❤️ הוספה למועדפים"
+
+
+            //  מייצר תג מסוג כפתור לשמירת המתכון למועדפים שלי
+            const send_to_whatsapp = document.createElement('button');
+
+            //מעדכן מה יהיה השם של הכפתור
+            send_to_whatsapp.innerHTML = " 📞 שליחת המתכון לווצאפ"
+
+            send_to_whatsapp.addEventListener("click", () => {
+
+
+            // יצירת קישור לשליחה בווצאפ
+            const url = `https://wa.me/${+9720583269399}?text=${encodeURIComponent(ingredientsListDiv.textContent)}`;
+
+            // פתיחת הקישור בלשונית חדשה
+            window.open(url, "_blank");
+            });
+        
 
 
             //מוסיף לתגית מסוג כפתןר המועדפים, פונקציית האזנה, שבאם המשתמש ילחץ עליו זה יוסיף למועדפים את המתכון
@@ -529,6 +547,9 @@ function Recipe_information(id) {
             //מוסיף לתג תחתון עמוד אמצעי את כפתור הוספת לרשימת קניות
             footer_recipeDetails.appendChild(Add_to_shopping_list)
 
+            footer_recipeDetails.appendChild(send_to_whatsapp)
+
+
             //שולח את הדיו שיצרנו אמש עבור הצגת הרכיבין - לפונקציה שמכינה את הרכיבים של המתכון
             AdReciv(ingredientsListDiv)
 
@@ -566,7 +587,7 @@ function AdReciv(ingredientsListDiv) {
 
 
         //מזריק את כל השרשור שיצרנו לתגית מסוג פסקה
-        ingredientParagraph.textContent = ingredientText + "  "+"✔️";
+        ingredientParagraph.textContent = ingredientText + "  " + "✔️";
 
         //מכניס כילד את הפסקה עם השרשור,-------לדיו שקבלנו והוא אמור להציג את רכיבי המתכון 
         ingredientsListDiv.appendChild(ingredientParagraph);
