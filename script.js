@@ -105,7 +105,7 @@ function Search_eat1() {
 
                 //מוסיף לתגית מסוג התמונה, פונקציית האזנה, שבאם המשתמש ילחץ על התמונה 
                 // זה ישלח לפונקציה של הצגת רכיבי המתכון את המספר המזהה של המתכון על פי מה ששמרנו  לתמונה וזה יציג  בחלונית באמצע העמוד את רכיבי המתכון ועוד
-                img1.addEventListener('click', () => {
+                eater.addEventListener('click', () => {
 
                     Recipe_information(eater.id);
                 });
@@ -117,15 +117,18 @@ function Search_eat1() {
                 eater.appendChild(eater1);
 
 
-                img1.style.width = "350px"
-                img1.style.height = "100px"
-                // eater.style.border = "2px solid black";
+
+                img1.style.width = "70px"
+                img1.style.height = "70px"
+                img1.style.borderRadius = "16px"
+                img1.style.marginRight = "10px";
+
                 eater.style.marginBottom = "10px";
-                eater.style.textAlign = "center"
-                eater1.style.textAlign = "center"
+                eater.style.alignItems = "center"
                 eater.style.padding = "10px"
                 eater.style.borderRadius = "16px"
-                img1.style.borderRadius = "16px"
+                eater.style.display = "flex";
+                eater.style.backgroundColor = "#f9f9f9";
                 eater1.style.fontWeight = "bold"; /* עושה את הטקסט מודגש */
 
 
@@ -202,6 +205,7 @@ function Recipe_information(id) {
             //מעדכן למשתנה מסוג תמונה שנוצר אמש את התמונה של המתכון שמוצג כעת בחלונית האמצעית
             recipeImage.src = dataInfo.image;
             recipeImage.style.width = '100%'; // גודל התמונה מתואם לעמודה
+            recipeImage.style.borderRadius = '8px'; // גודל התמונה מתואם לעמודה
 
             //מכניס כילד,למשתנה שמצביע לחון האמצעי, את התג מסוג תמונה שיצרנו אמש ומכיל את תמונת המתכון שנלחץ וכעת יוצג בחלון האמצעי   
             recipeDetails.appendChild(recipeImage);
@@ -209,7 +213,6 @@ function Recipe_information(id) {
 
             // מייצר תג מסוג דיו שהוא הולך להכיל את רכיבי המתכון שמוצג בחלון האמצעי
             const ingredientsListDiv = document.createElement('div');
-            // ingredientsListDiv.style.marginTop = '20px';
 
             ingredientsListDiv.classList.add('ingredientsListDiv');
 
@@ -375,10 +378,8 @@ function Recipe_information(id) {
                 const deleteBtn = document.createElement('button');
 
                 //התמונה שתוצג על כפתור המחיקה
-                deleteBtn.textContent = '🚮';
-                deleteBtn.style.fontSize = '30px'; // שינוי גודל הטקסט (האימוג'י) ל-24 פיקסלים
-                deleteBtn.style.marginLeft = '10px';
-                deleteBtn.style.backgroundColor = 'white';
+                deleteBtn. innerHTML= '<img src="images/GARBITSH.JPG"  style="width: 25px; height: 25px;">';
+              
 
                 //מוסיף לתגית מסוג כפתןר מחיקה במועדפים, פונקציית האזנה, שבאם המשתמש ילחץ עליו זה ימחק מהמועדפים את המתכון
                 deleteBtn.addEventListener('click', () => {
