@@ -62,7 +62,6 @@ header {
 
 
 
-
 /* אחראי על עיצוב עמודה שמאלית תוצאות חיפוש */
 
 .left-column {
@@ -93,44 +92,6 @@ header {
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-/* עיצוב סרגל הגלילה */
-.right-column::-webkit-scrollbar,
-.left-column::-webkit-scrollbar,
-.center-column::-webkit-scrollbar {
-    width: 10px; /* רוחב סרגל הגלילה */
-    border-radius: 10px; /* פינות מעוגלות */
-}
-
-.right-column::-webkit-scrollbar-track,
-.left-column::-webkit-scrollbar-track,
-.center-column::-webkit-scrollbar-track {
-    background: #f1f1f1; /* צבע המסילה */
-    border-radius: 10px; /* עיגול למסילה */
-}
-
-.right-column::-webkit-scrollbar-thumb,
-.left-column::-webkit-scrollbar-thumb,
-.center-column::-webkit-scrollbar-thumb {
-    background: #888; /* צבע הידית */
-    border-radius: 10px; /* עיגול לידית */
-}
-
-.right-column::-webkit-scrollbar-thumb:hover,
-.left-column::-webkit-scrollbar-thumb:hover,
-.center-column::-webkit-scrollbar-thumb:hover {
-    background: #555; /* צבע הידית במעבר עכבר */
-}
 
 /* אחראי על עיצוב עמודה אמצעית רכיב מתכון  */
 
@@ -187,41 +148,39 @@ header {
 }
 
 
-.heart {
-    position: relative;
-    z-index: 10;
-    /* מוודא שהלב יהיה מעל כל אלמנט אחר */
+
+/* עיצוב סרגל הגלילה */
+.right-column::-webkit-scrollbar,
+.left-column::-webkit-scrollbar,
+.center-column::-webkit-scrollbar {
+    width: 10px; /* רוחב סרגל הגלילה */
+    border-radius: 10px; /* פינות מעוגלות */
 }
 
- .content {
-    display: none; /* מוסתר כברירת מחדל */
-    position: absolute;
-    top: 100%; /* ממקם את התוכן מתחת לאייקון */
-    left: 0; /* מסדר את התוכן בצורה שתהיה תואמת לאלמנט */
-    transform: translateX(0); /* מבטל את המרכז האופקי */
-    padding: 8px 12px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    z-index: 50; /* מבטיח שהתוכן יהיה מעל שאר האלמנטים */
-    width: 100px; /* מאפשר לתוכן להסתגל לגודל */
-    max-width: 250px; /* רוחב מקסימלי לרשימה */
-    height: auto; /* הגובה יהיה אוטומטי לפי התוכן */
-    max-height: 400px; /* גובה מקסימלי לרשימה */
-    overflow-y: auto; /* גלילה אנכית */
-    border: 2px solid #ddd; /* מסגרת בהירה */
-    background-color: #ffffff; /* צבע רקע */
-    opacity: 1; /* ביטול שקיפות */
-    visibility: hidden; /* מוסתר כברירת מחדל */
-    text-align: left; /* טקסט משמאל */
-    padding-top: 5px; /* רווח בין פריטי הרשימה */
-    border-radius: 5px; /* פינות מעוגלות */
-    transition: visibility 0s, opacity 0.2s ease-in-out; /* אנימציה בזמן חשיפת התוכן */
+.right-column::-webkit-scrollbar-track,
+.left-column::-webkit-scrollbar-track,
+.center-column::-webkit-scrollbar-track {
+    background: #f1f1f1; /* צבע המסילה */
+    border-radius: 10px; /* עיגול למסילה */
 }
-.heart:hover .content {
-    display: block;
-    /* מציג את התוכן בעת מעבר עכבר */
-    visibility: visible;
-    /* הופך אותו לגלוי */
+
+.right-column::-webkit-scrollbar-thumb,
+.left-column::-webkit-scrollbar-thumb,
+.center-column::-webkit-scrollbar-thumb {
+    background: #888; /* צבע הידית */
+    border-radius: 10px; /* עיגול לידית */
 }
+
+.right-column::-webkit-scrollbar-thumb:hover,
+.left-column::-webkit-scrollbar-thumb:hover,
+.center-column::-webkit-scrollbar-thumb:hover {
+    background: #555; /* צבע הידית במעבר עכבר */
+}
+
+
+
+
+
 
 /* אחראי על העיצוב של התיבת טקטסט חיפוש  */
 .header-content input[type="text"] {
@@ -371,3 +330,52 @@ button {
     color: #d32f2f;
   }
   
+
+
+
+
+
+
+  .heart-container {
+    position: relative;
+    display: inline-block;
+}
+
+.heart {
+    font-size: 2rem;
+    cursor: pointer;
+}
+
+.content {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    min-width: 100px; /* רוחב מינימלי */
+    max-width: 300px; /* רוחב מקסימלי */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    z-index: 1000; /* Ensure it appears above other elements */
+    overflow-y: auto; /* גלילה אנכית */
+    background-color: rgba(255, 255, 255, 0.7); /* צבע לבן עם שקיפות */
+    opacity: 1; /* שקיפות על הבלוק */
+    text-align: center;
+    max-height: 250px; /* גובה מקסימלי */
+    margin-left: 10px;
+    margin-right: 10px;
+    padding: 10px; /* רווח פנימי */
+    border: 2px solid black; /* מסגרת לעיצוב */
+    border-radius: 16px; /* פינות מעוגלות */
+}
+
+.heart-container:hover .content {
+    display: block;
+    right: 0; /* Align to the right edge of the container */
+    left: auto; /* Override the left position */
+}
+
+.content div {
+    border: 2px solid black; /* מסגרת לעיצוב */
+    margin: 5px 0; /* מרווח בין הפריטים */
+    padding: 5px; /* רווח פנימי בתוך הפריטים */
+    background-color: white; /* צבע רקע לפריטים */
+}

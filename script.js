@@ -307,7 +307,7 @@ function Recipe_information(id) {
             //מעדכן מה יהיה השם של הכפתור
             Add_to_favorites.innerHTML = `
             <div style="font-size: 14px; font-family: Arial, sans-serif; display: flex; align-items: center; gap: 8px;">
-            הוספה למועדפים
+Add to favorites
               <img src="images/LEV.PNG" alt="WhatsApp" style="width: 20px; height: 20px;">
             </div>
           `;
@@ -320,7 +320,7 @@ function Recipe_information(id) {
 
             send_to_whatsapp.innerHTML = `
             <div style="font-size: 14px; font-family: Arial, sans-serif; display: flex; align-items: center; gap: 8px;">
-              שליחה  לווצאפ
+send to whatsapp
               <img src="images/whatsapp.PNG" alt="WhatsApp" style="width: 20px; height: 20px;">
             </div>
           `;
@@ -333,7 +333,7 @@ function Recipe_information(id) {
 
             send_to_Email.innerHTML = `
             <div style="font-size: 14px; font-family: Arial, sans-serif; display: flex; align-items: center; gap: 8px;">
-              שליחה  לאימייל
+Send to email
               <img src="images/Email.PNG" alt="WhatsApp" style="width: 20px; height: 20px;">
             </div>
           `;
@@ -377,9 +377,13 @@ function Recipe_information(id) {
                 //מטסיף כפתור מחיקה שיוצג ליד כל מתכון שנשמר למועדפים  למקרה שירצה למחוק מהרשימה
                 const deleteBtn = document.createElement('button');
 
+                deleteBtn.style.width = "40px";
+                deleteBtn.style.height = "40px";
+                deleteBtn.style.backgroundColor = "white";
+
                 //התמונה שתוצג על כפתור המחיקה
-                deleteBtn. innerHTML= '<img src="images/GARBITSH.JPG"  style="width: 25px; height: 25px;">';
-              
+                deleteBtn.innerHTML = '<img src="images/garb.JPG"  style="width: 30px; height: 30px;">';
+
 
                 //מוסיף לתגית מסוג כפתןר מחיקה במועדפים, פונקציית האזנה, שבאם המשתמש ילחץ עליו זה ימחק מהמועדפים את המתכון
                 deleteBtn.addEventListener('click', () => {
@@ -395,14 +399,35 @@ function Recipe_information(id) {
                     Recipe_information(eater.id);
                 });
 
-                //מוסיף את הכפתור מחיקת מתכון מועדף לדיו שהולך להחזיק את כל המתכון המועדף
-                eater.appendChild(deleteBtn)
+
+
+                img1.style.width = "70px"
+                img1.style.height = "70px"
+                img1.style.borderRadius = "16px"
+                img1.style.marginRight = "10px";
+
+                eater.style.marginBottom = "10px";
+                eater.style.alignItems = "center"
+                eater.style.padding = "10px"
+                eater.style.borderRadius = "16px"
+                eater.style.display = "flex";
+                eater.style.backgroundColor = "#f9f9f9";
+
+                eater1.style.fontWeight = "bold"; /* עושה את הטקסט מודגש */
+
 
                 //מוסיף את תמונת המתכון מועדף לדיו שהולך להחזיק את כל המתכון המועדף
                 eater.appendChild(img1)
 
                 //מוסיף את שפ המתכון המועדף לדיו שהולך להחזיק את כל המתכון המועדף
                 eater.appendChild(eater1)
+
+                //מוסיף את הכפתור מחיקת מתכון מועדף לדיו שהולך להחזיק את כל המתכון המועדף
+                eater.appendChild(deleteBtn)
+
+
+
+
 
                 //מזריק את כל הדיו שהכנו עם כל פרטי המתכון המועדף למשתנה שמצביע לדיו חלונית המועדפים ןמעכשיו זה יוצג למשתמש
                 ad_heart.appendChild(eater)
@@ -419,7 +444,7 @@ function Recipe_information(id) {
             Add_to_shopping_list.innerHTML = `
 
             <div style="font-size: 14px; font-family: Arial, sans-serif; display: flex; align-items: center; gap: 8px;">
-            הוסף לסל קניות
+Added to shopping list
               <img src="images/shopping basket.JPG" alt="WhatsApp" style="width: 20px; height: 20px;">
             </div>
           `;
@@ -531,7 +556,7 @@ function Recipe_information(id) {
                     deleteBtn.classList.add('delete-btn');  // מוסיף את הקלאס לכפתור המחיקה
 
                     //מעדכן מה יהיה הציור על הכפתור
-                    deleteBtn.innerHTML = '<img src="images/GARBITSH.JPG"  style="width: 25px; height: 25px;">';
+                    deleteBtn.innerHTML = '<img src="images/garb.JPG"  style="width: 25px; height: 25px;">';
 
 
 
