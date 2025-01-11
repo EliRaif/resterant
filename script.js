@@ -301,33 +301,36 @@ function Recipe_information(id) {
 
             footer_recipeDetails.classList.add("header-recipe-details");
 
-            //  מייצר תג מסוג כפתור לשמירת המתכון למועדפים שלי
-            const Add_to_favorites = document.createElement('button');
-
-            //מעדכן מה יהיה השם של הכפתור
-            Add_to_favorites.innerHTML = `
-            <div style="font-size: 14px; font-family: Arial, sans-serif; display: flex; align-items: center; gap: 8px;">
-Add to favorites
-              <img src="images/LEV.PNG" alt="WhatsApp" style="width: 20px; height: 20px;">
-            </div>
-          `;
+     
 
 
-
-            //  מייצר תג מסוג כפתור לשמירת המתכון למועדפים שלי
-            const send_to_whatsapp = document.createElement('button');
-
-
-            send_to_whatsapp.innerHTML = `
-            <div style="font-size: 14px; font-family: Arial, sans-serif; display: flex; align-items: center; gap: 8px;">
-send to whatsapp
-              <img src="images/whatsapp.PNG" alt="WhatsApp" style="width: 20px; height: 20px;">
-            </div>
-          `;
+//             //  מייצר תג מסוג כפתור לשמירת המתכון לווצאפ שלי
+//             const send_to_whatsapp = document.createElement('button');
 
 
+//             send_to_whatsapp.innerHTML = `
+//             <div style="font-size: 14px; font-family: Arial, sans-serif; display: flex; align-items: center; gap: 8px;">
+// send to whatsapp
+//               <img src="images/whatsapp.PNG" alt="WhatsApp" style="width: 20px; height: 20px;">
+//             </div>
+//           `;
 
-            //  מייצר תג מסוג כפתור לשמירת המתכון למועדפים שלי
+
+      // send_to_whatsapp.addEventListener("click", () => {
+
+
+            //     // יצירת קישור לשליחה בווצאפ
+            //     const url = `https://wa.me/${+9720583269399}?text=${encodeURIComponent(ingredientsListDiv.textContent)}`;
+
+            //     // פתיחת הקישור בלשונית חדשה
+            //     window.open(url, "_blank");
+            // });
+
+
+
+
+
+            //  מייצר תג מסוג כפתור לשליחת המתכון לאימייל שלי   
             const send_to_Email = document.createElement('button');
 
 
@@ -340,15 +343,47 @@ Send to email
 
 
 
-            send_to_whatsapp.addEventListener("click", () => {
+    
+
+            //  מייצר תג מסוג כפתור לפתיחת מידע מורחב על המתכון   
+            const information_link = document.createElement('button');
 
 
-                // יצירת קישור לשליחה בווצאפ
-                const url = `https://wa.me/${+9720583269399}?text=${encodeURIComponent(ingredientsListDiv.textContent)}`;
+            information_link.innerHTML = `
+            <div style="font-size: 14px; font-family: Arial, sans-serif; display: flex; align-items: center; gap: 8px;">
+  information link
+                <img src="images/infomitiom.jpg" alt="WhatsApp" style="width: 30px; height: 30px;">
+
+            </div>
+          `;
+
+                
+
+            information_link.addEventListener("click", () => {
+
+
+                //  מחזיק את הקישור של מידע מורחב על המכון  
+                const url = data.spoonacularSourceUrl;
 
                 // פתיחת הקישור בלשונית חדשה
                 window.open(url, "_blank");
             });
+
+
+
+
+
+
+       //  מייצר תג מסוג כפתור לשמירת המתכון למועדפים שלי
+       const Add_to_favorites = document.createElement('button');
+
+       //מעדכן מה יהיה השם של הכפתור
+       Add_to_favorites.innerHTML = `
+       <div style="font-size: 14px; font-family: Arial, sans-serif; display: flex; align-items: center; gap: 8px;">
+Add to favorites
+         <img src="images/LEV.PNG" alt="WhatsApp" style="width: 20px; height: 20px;">
+       </div>
+     `;
 
 
 
@@ -358,6 +393,9 @@ Send to email
 
                 //מייצר תגית דיו חדש שהולך להחזיק את כל פרטי המתכון
                 const eater = document.createElement('div');
+
+                eater.classList.add("Design_favorites");
+
 
                 //מייצר תגית תמונה חדש שהולך להזיק את תמונת המתכון
                 const img1 = document.createElement('img');
@@ -377,9 +415,6 @@ Send to email
                 //מטסיף כפתור מחיקה שיוצג ליד כל מתכון שנשמר למועדפים  למקרה שירצה למחוק מהרשימה
                 const deleteBtn = document.createElement('button');
 
-                deleteBtn.style.width = "40px";
-                deleteBtn.style.height = "40px";
-                deleteBtn.style.backgroundColor = "white";
 
                 //התמונה שתוצג על כפתור המחיקה
                 deleteBtn.innerHTML = '<img src="images/garb.JPG"  style="width: 30px; height: 30px;">';
@@ -401,19 +436,6 @@ Send to email
 
 
 
-                img1.style.width = "70px"
-                img1.style.height = "70px"
-                img1.style.borderRadius = "16px"
-                img1.style.marginRight = "10px";
-
-                eater.style.marginBottom = "10px";
-                eater.style.alignItems = "center"
-                eater.style.padding = "10px"
-                eater.style.borderRadius = "16px"
-                eater.style.display = "flex";
-                eater.style.backgroundColor = "#f9f9f9";
-
-                eater1.style.fontWeight = "bold"; /* עושה את הטקסט מודגש */
 
 
                 //מוסיף את תמונת המתכון מועדף לדיו שהולך להחזיק את כל המתכון המועדף
@@ -453,6 +475,8 @@ Added to shopping list
 
             //מוסיף לתגית מסוג כפתור הוספה לרשימת קניות, פונקציית האזנה, שבאם המשתמש ילחץ עליו זה יוסיף את הרכיבים לסל קניות בחלון הימני
             Add_to_shopping_list.addEventListener('click', () => {
+
+                alert('!המתכון שלך נוסף לסל הקניות ')
 
                 //מרוקן את כל התוכן שנמצא כעת בסל קניות בחלון הימני
                 shopping_list.innerHTML = '';
@@ -589,9 +613,11 @@ Added to shopping list
             //מוסיף לתג תחתון עמוד אמצעי את כפתור הוספת לרשימת קניות
             footer_recipeDetails.appendChild(Add_to_shopping_list)
 
-            footer_recipeDetails.appendChild(send_to_whatsapp)
+            // footer_recipeDetails.appendChild(send_to_whatsapp)
 
             footer_recipeDetails.appendChild(send_to_Email)
+
+            footer_recipeDetails.appendChild(information_link)
 
 
             //שולח את הדיו שיצרנו אמש עבור הצגת הרכיבין - לפונקציה שמכינה את הרכיבים של המתכון
@@ -603,7 +629,7 @@ Added to shopping list
             //מזריק לדיו הראשי שאחראי על הצגת הרכיב  בחלון האמצעי את רכיבי המתכון בלבד
             recipeDetails.appendChild(ingredientsListDiv);
 
-            //מזריק לדיו הראשי שאחראי על הצגת הרכיב  בחלון האמצעי את כפתורי הוספה לרישמת קניות ולמועדפים
+            //מזריק לדיו הראשי שאחראי על הצגת הרכיב  בחלון האמצעי כפתור פתיחת מידע מתכון מורחב  
             recipeDetails.appendChild(footer_recipeDetails);
 
         })

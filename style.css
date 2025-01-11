@@ -330,21 +330,13 @@ button {
     color: #d32f2f;
   }
   
-
-
-
-
-
-
   .heart-container {
     position: relative;
     display: inline-block;
-}
-
-.heart {
     font-size: 2rem;
     cursor: pointer;
 }
+
 
 .content {
     display: none;
@@ -373,9 +365,55 @@ button {
     left: auto; /* Override the left position */
 }
 
-.content div {
-    border: 2px solid black; /* מסגרת לעיצוב */
-    margin: 5px 0; /* מרווח בין הפריטים */
-    padding: 5px; /* רווח פנימי בתוך הפריטים */
-    background-color: white; /* צבע רקע לפריטים */
-}
+
+
+div.Design_favorites  {
+    display: flex; /* הפעלת Flexbox */
+    align-items: center; /* יישור אנכי של כל האלמנטים במרכז */
+    justify-content: space-between; /* פיזור האלמנטים בצורה מסודרת */
+    gap: 10px; /* מרווח בין האלמנטים */
+    padding: 10px; /* רווח פנימי */
+    border-radius: 8px; /* פינות מעוגלות */
+    background-color:rgba(255, 255, 255, 0.7); /* צבע רקע */
+    max-width: 600px; /* רוחב מקסימלי */
+    margin: 10px auto; /* רווח חיצוני מרכזי */
+    border: none; /* ביטול מסגרת */
+  }
+  
+  .Design_favorites img {
+    width: 70px; /* רוחב התמונה */
+    height: 70px; /* גובה התמונה */
+    border-radius: 16px; /*עיגול התמונה*/
+  }
+  
+  .Design_favorites p {
+    flex-grow: 1; /* התפשטות הפסקה */
+    margin: 0; /* ביטול רווחים ברירת מחדל */
+    padding-left: 10px; /* מרווח פנימי קטן */
+    font-size: 1rem; /* גודל גופן */
+    color: black;         /* הגדרת צבע טקסט לשחור */
+    font-weight: bold;    /* הגדרת הטקסט להיות מודגש */  }
+
+    
+  
+  .Design_favorites button  {
+    border: none; /* ביטול מסגרת */
+    /* border-radius: 5px; פינות מעוגלות */
+    padding: 5px 10px; /* רווח פנימי */
+    cursor: pointer; /* שינוי הסמן ליד */
+    font-size: 0.9rem; /* גודל גופן */
+    background-color: #f9f9f9; /* צבע רקע */
+  }
+  
+
+
+  
+
+  .logo {
+    position: absolute; /* מיקום מוחלט */
+    top: 7%; /* מיקום באמצע הכותרת מבחינה אנכית */
+    left: 20px; /* מרווח מהקצה השמאלי של ה-header */
+    transform: translateY(-50%); /* ממרכז את הלוגו אנכית בדיוק באמצע */
+    display: flex;
+    align-items: center;
+  }
